@@ -104,23 +104,24 @@
         </div>
     </div>
 <br><hr class="style13"><br>
-
-<div id="app">
-        <div class="container-fluid">
-          <ul class="list-group">
-            <post v-for="post in posts" :post="post"></post>
-          </ul>
+<div class="container-fluid pb-2">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                        <h3 class="text-center text-primary">Comments</h3>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="c-header"></div>
+                        <div class="c-body"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <template id="post-template">
-          <li class="list-group-item">
-              <i class="glyphicon glyphicon-chevron-up" @click="upvote"></i>
-              <span class="label label-primary">{{ votes }}</span>
-              <i class="glyphicon glyphicon-chevron-down" @click="downvote"></i>
-              <a>{{ post.title }}</a>
-          </li>
-      </template>
+        
+    </div>
+</div>
 
 <!-----------------------------------FOOTER-------------------------------------------->
 <div class="h-8"></div>
