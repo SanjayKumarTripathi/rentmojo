@@ -90,12 +90,12 @@
 <div class="container-fluid">
 <div class="container pb-cmnt-container">
         <div class="row">
-            <div class="col-md-8  text-center ml-8">
+            <div class="col">
                 <div class="panel panel-info">
-                    <div class="panel-body">
+                    <div class="panel-body justify-content-center">
                         <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea border border-primary"></textarea>
                         <form class="form-inline pb-3">
-                            <button class="btn btn-primary" type="button">Post Comment</button>
+                            <button class="btn btn-block btn-primary " type="button">Post Comment</button>
                         </form>
                     </div>
                 </div>
@@ -103,26 +103,27 @@
         </div>
         </div>
     </div>
-    
-    <style>
-        .pb-cmnt-container {
-            font-family: Lato;
-            margin-top: 100px;
-        }
-    
-        .pb-cmnt-textarea {
-            resize: none;
-            padding: 20px;
-            height: 130px;
-            width: 100%;
-            border: 1px solid #F2F2F2;
-        }
-    </style>
+<br><hr class="style13"><br>
 
-<!-------------end-------------------CONTACT SECTION------------------end----------------->
+<div id="app">
+        <div class="container-fluid">
+          <ul class="list-group">
+            <post v-for="post in posts" :post="post"></post>
+          </ul>
+        </div>
+      </div>
+      
+      <template id="post-template">
+          <li class="list-group-item">
+              <i class="glyphicon glyphicon-chevron-up" @click="upvote"></i>
+              <span class="label label-primary">{{ votes }}</span>
+              <i class="glyphicon glyphicon-chevron-down" @click="downvote"></i>
+              <a>{{ post.title }}</a>
+          </li>
+      </template>
 
 <!-----------------------------------FOOTER-------------------------------------------->
-
+<div class="h-8"></div>
 	<div class="container-fluid footer bg-dark">
 		<div class="container">
 			<div class="row">
@@ -132,21 +133,17 @@
                                 
                                  <div class="d-flex col-sm align-content-center social" >
 
-										<a href="https://plus.google.com/discover" target="_blank"><i class="fa fa-google-plus-circle rounded-circle p-2 mr-2 bg-warning"></i></a>
+										<a href="https://plus.google.com/discover" target="_blank"><i class="fa fa-google-plus-circle rounded-circle p-2 mr-2 bg-success"></i></a>
 
-										<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square rounded-circle mr-2  p-2 bg-warning"></i></a>
+										<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square rounded-circle mr-2  p-2 bg-success"></i></a>
 										
-										<a href="https://medium.com/" target="_blank"><i class="fa fa-medium rounded-circle  mr-2 p-2 bg-warning"></i></a>
-										
-										<a href="https://web.skype.com/en/" target="_blank"><i class="fa fa-skype rounded-circle mr-2 p-2 bg-warning"></i></a>
+										<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter rounded-circle mr-2 p-2 bg-success"></i></a>
 												
-										<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter rounded-circle mr-2 p-2 bg-warning"></i></a>
-												
-										<a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play rounded-circle  mr-2 p-2 bg-warning"></i></a>
+										<a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play rounded-circle  mr-2 p-2 bg-success"></i></a>
 										
-										<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin rounded-circle mr-2 p-2 bg-warning"></i></a>
+										<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin rounded-circle mr-2 p-2 bg-success"></i></a>
 										
-										<a href="https://github.com/" target="_blank"><i class="fa fa-github rounded-circle  mr-2 p-2 bg-warning"></i></a>
+										<a href="https://github.com/" target="_blank"><i class="fa fa-github rounded-circle  mr-2 p-2 bg-success"></i></a>
 		
 									</div>
                             </div> 
