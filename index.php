@@ -1,1 +1,1 @@
-<?php include_once('./views/index.html') ?>
+<?php location('./views/index.html'); ?>
